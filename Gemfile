@@ -3,6 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'font-awesome-rails'
+gem 'carrierwave'
+gem 'ridgepole'
+
+# フロント用のgem
+gem 'bootstrap_form'
+gem 'slim-rails'
+gem 'html2slim'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use mysql as the database for Active Record
@@ -62,6 +71,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'font-awesome-rails'
-gem 'carrierwave'
-gem 'ridgepole'
