@@ -82,6 +82,7 @@ GEM
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     diff-lcs (1.4.4)
+    diffy (3.4.0)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -158,6 +159,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.8.1)
+    ridgepole (0.8.10)
+      activerecord (>= 5.0.1, < 6.1)
+      diffy
     rspec-core (3.9.3)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.2)
@@ -242,6 +246,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.3)
+  ridgepole
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver

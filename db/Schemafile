@@ -1,0 +1,9 @@
+require 'users.schema'
+
+require 'outerwear.schema'
+require 'tops.schema'
+require 'pants.schema'
+require 'shoes.schema'
+require 'accessories.schema'
+require 'brands.schema'
+require 'colors.schema'
