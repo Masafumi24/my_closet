@@ -1,0 +1,20 @@
+.closet-index_top {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 5%;
+
+  &_box {
+    height: 90%;
+    width: 100%;
+    background-image: image-url("closet_index_top.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+.closet-index_content {
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 0 5%;
+}
