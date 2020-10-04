@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: "closet#index"
+  root to: 'closet#index'
 end
