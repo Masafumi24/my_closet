@@ -1,0 +1,4 @@
+create_table "top_brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "トップス、ブランドの中間テーブル" do |t|
+  t.integer  :top_id
+  t.integer  :brand_id
+end

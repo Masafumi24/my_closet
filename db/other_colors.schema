@@ -1,0 +1,4 @@
+create_table "other_colors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "その他、カラーの中間テーブル" do |t|
+  t.integer  :other_id
+  t.integer  :color_id
+end

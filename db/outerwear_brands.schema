@@ -1,0 +1,4 @@
+create_table "outerwear_brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "アウター、ブランドの中間テーブル" do |t|
+  t.integer  :outerwear_id
+  t.integer  :brand_id
+end

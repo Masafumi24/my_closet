@@ -1,4 +1,4 @@
-create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "ブランドの管理" do |t|
+create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "ショップ管理のためのテーブル" do |t|
   t.string "name",                                                null: false
   t.datetime "created_at",                                        null: false
   t.datetime "updated_at",                                        null: false
