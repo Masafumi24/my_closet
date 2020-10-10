@@ -3,12 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'pry-rails'
 gem 'carrierwave'
 gem 'font-awesome-rails'
 gem 'ridgepole'
 gem 'active_hash'
 
 # フロント用のgem
+gem 'webpacker', github: 'rails/webpacker'
 gem 'bootstrap_form'
 gem 'html2slim'
 gem 'slim-rails'

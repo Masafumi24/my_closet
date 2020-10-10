@@ -1,3 +1,3 @@
 create_table "colors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "色の管理" do |t|
-  t.integer "data_id",                                                  null: false
+  t.integer "color_data_id",                                                  null: false
 end

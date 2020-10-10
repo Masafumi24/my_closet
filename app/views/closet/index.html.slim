@@ -1,7 +1,14 @@
 .closet-index_top
   .closet-index_top_box
-.closet-index_content
-  h1.closet-index_content_title
-    |　色の割合
-  = pie_chart @chart
-
+.closet-index_graph
+  .closet-index_graph_box
+    h1.closet-index_graph_box_title
+      | 色の割合
+    = pie_chart @chart, colors: @colors
+  .closet-index_graph_box
+    h1.closet-index_graph_box_title
+      | 季節ごとのアイテムの割合
+    = pie_chart @chart
+.closet-index_new
+  = link_to '#', class: "closet-index_new_btn" do
+    | 収納する

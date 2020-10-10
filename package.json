@@ -1,21 +1,5 @@
 {
   "name": "my_closet",
   "private": true,
-  "dependencies": {
-    "@rails/webpacker": "5.1.1",
-    "vue": "^2.6.12",
-    "vue-loader": "^15.9.3",
-    "vue-template-compiler": "^2.6.12"
-  },
-  "devDependencies": {
-    "webpack-dev-server": "^3.11.0"
-  },
-  "babel": {
-    "presets": [
-      "./node_modules/@rails/webpacker/package/babel/preset.js"
-    ]
-  },
-  "browserslist": [
-    "defaults"
-  ]
+  "dependencies": {}
 }
