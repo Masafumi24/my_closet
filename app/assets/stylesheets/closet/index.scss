@@ -30,8 +30,28 @@
 .closet-index_new {
   text-align: center;
   &_btn {
+    display: inline-block;
+    margin-bottom: 5vh;
     border: 1px solid white;
-    padding: 1.0rem 3.0rem;
+    padding: 1.0rem 4.0rem;
   }
+  &_btn:hover {
+    background-color: rgb(32, 32, 32);
+  }
+
+  #closet-index_new_box {
+    display: none;
+
+    .closet-index_new_box {
+      box-sizing: border-box;
+      padding: 20vh 5vh;
+      display: flex;
+      justify-content: space-evenly;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+    }
+  }
+  
+
 }
 

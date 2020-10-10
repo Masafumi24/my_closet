@@ -10,7 +10,8 @@ gem 'ridgepole'
 gem 'active_hash'
 
 # フロント用のgem
-gem 'webpacker', github: 'rails/webpacker'
+gem "jquery-rails"
+gem 'font-awesome-sass'
 gem 'bootstrap_form'
 gem 'html2slim'
 gem 'slim-rails'

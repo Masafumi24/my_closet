@@ -4,11 +4,31 @@
   .closet-index_graph_box
     h1.closet-index_graph_box_title
       | 色の割合
-    = pie_chart @chart, colors: @colors
+    = pie_chart @color_graph_data, colors: @background_colors
   .closet-index_graph_box
     h1.closet-index_graph_box_title
       | 季節ごとのアイテムの割合
-    = pie_chart @chart
+    = pie_chart @color_graph_data
 .closet-index_new
-  = link_to '#', class: "closet-index_new_btn" do
+  .closet-index_new_btn#closet-index_new_btn
     | 収納する
+  #closet-index_new_box
+    ul.closet-index_new_box
+      li.closet-index_new_box_list
+        = link_to '#'
+          | TOPS
+      li.closet-index_new_box_list
+        = link_to '#'
+          | OUTER WEAR
+      li.closet-index_new_box_list
+        = link_to '#'
+          | PANTS or SKIRT
+      li.closet-index_new_box_list
+        = link_to '#'
+          | SHOES
+      li.closet-index_new_box_list
+        = link_to '#'
+          | ACCESSORY
+      li.closet-index_new_box_list
+        = link_to '#'
+          | OTHER
