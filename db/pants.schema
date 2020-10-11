@@ -1,5 +1,4 @@
 create_table "pants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "ズボンの管理" do |t|
-  t.string "name",                                                null: false
   t.string "image",                                               null: false
   t.datetime "purchase_date",                                     null: false
   t.integer "prefecture_id"

@@ -1,5 +1,4 @@
 create_table "others", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "その他の管理（ヘッドウェアやアイウェアなど）" do |t|
-  t.string "name",                                                null: false
   t.string "image",                                               null: false
   t.datetime "purchase_date",                                     null: false
   t.integer "prefecture_id"

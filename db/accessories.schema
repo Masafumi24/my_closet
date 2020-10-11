@@ -1,5 +1,4 @@
 create_table "accessories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "アクセサリーの管理" do |t|
-  t.string "name",                                                null: false
   t.string "image",                                               null: false
   t.datetime "purchase_date",                                     null: false
   t.integer "prefecture_id"

@@ -1,6 +1,25 @@
 class Color < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :color_data
+
+  has_many :accessories, through: :color_blands
+  has_many :accessory_colors
+
+  has_many :others, through: :other_colors
+  has_many :other_colors
+
+  has_many :outerwears, through: :outerwear_colors
+  has_many :outerwear_colors
+
+  has_many :pants, through: :pant_colors
+  has_many :pant_colors
+
+  has_many :shoes, through: :shoe_colors
+  has_many :shoe_colors
+
+  has_many :tops, through: :tops_colors
+  has_many :tops_colors
+
   class << self
     def color_data_acquisition_for_graphs
       colors = all

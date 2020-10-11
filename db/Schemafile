@@ -5,7 +5,7 @@ require 'colors.schema'
 require 'shops.schema'
 require 'seasons.schema'
 
-require 'outerwear.schema'
+require 'outerwears.schema'
 require 'outerwear_brands.schema'
 require 'outerwear_colors.schema'
 require 'outerwear_seasons.schema'
@@ -26,7 +26,7 @@ require 'shoe_colors.schema'
 require 'shoe_seasons.schema'
 
 require 'accessories.schema'
-require 'accessory_brand.schema'
+require 'accessory_brands.schema'
 require 'accessory_colors.schema'
 
 require 'others.schema'
