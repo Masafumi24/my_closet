@@ -1,4 +1,4 @@
-create_table "outerwear", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "アウターの管理" do |t|
+create_table "outerwears", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "アウターの管理" do |t|
   t.string "name",                                                null: false
   t.string "image",                                               null: false
   t.datetime "purchase_date",                                     null: false
