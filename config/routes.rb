@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root to: 'closet#index'
-  resource :tops, only: [:new]
-  resource :outerwear, only: [:new]
-  resource :pants, only: [:new]
-  resource :shoes, only: [:new]
-  resource :accesories, only: [:new]
-  resource :others, only: [:new]
+  resource :tops, only: [:new, :create]
+  resource :outerwears, only: [:new, :create]
+  resource :pants, only: [:new, :create]
+  resource :shoes, only: [:new, :create]
+  resource :accessories, only: [:new, :create]
+  resource :others, only: [:new, :create]
 end

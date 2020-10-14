@@ -1,0 +1,35 @@
+= form_with(model: model, local: true, class: "form") do |f|
+  .form_area
+    .form_area_header
+      h1 Store in the Closet
+      br
+      | 〜収納する〜
+    .form_area_content
+      .form_area_content_image_box
+        = f.label :image
+          .form_area_content_image_box_btn   
+            | 画像をアップロード
+            = f.file_field :image, class: "form_area_content_image_box_btn_none"
+        - if model.image.present?
+          .form_area_content_image_box_preview          
+        - else
+          .form_area_content_image_box_camera
+      = f.fields_for :colors do |color_field|
+        = color_field.collection_select :color_ids, ColorData.all, :id, :name, include_hidden: false, multiple: true, prompt: "カラー  ※複数選択可", class: "form_area_content_select"
+        / = color_field.collection_select :color_ids, ColorData.all, :id, :name, { include_hidden: false }, { class: 'form_area_content_select', multiple: true, prompt: "カラー  ※複数選択可" }
+      
+      = f.fields_for :blands do |bland_field|
+        = bland_field.collection_select :brand_ids, PrefectureData.all, :id, :name, prompt: "マイブランド  ※複数選択可", class: "form_area_content_select"
+        = bland_field.text_field :name, class: "form_area_content_text", placeholder: "登録されていないブランド  ※複数入力可", color: "#fff"
+
+      = f.fields_for :shop do |shop_field|
+        = shop_field.collection_select :shop_id, PrefectureData.all, :id, :name, prompt: "マイショップ", class: "form_area_content_select"
+        = shop_field.text_field :name, class: "form_area_content_text", placeholder: "登録されていないショップ", color: "#fff"
+
+      = f.text_field :purchase_date, class: "form_area_content_text", placeholder: "購入日", color: "#fff"
+
+      = f.collection_select :prefecture_id, PrefectureData.all, :id, :name, prompt: "購入地域", class: "form_area_content_select", class: "form_area_content_select"
+
+      - if controller_name != "accessories"
+        = f.fields_for :seasons do |season_field|
+          = season_field.collection_select :shop_id, PrefectureData.all, :id, :name, prompt: "季節  ※複数選択可", class: "form_area_content_select"
