@@ -2,7 +2,6 @@ require 'users.schema'
 
 require 'brands.schema'
 require 'colors.schema'
-require 'shops.schema'
 require 'seasons.schema'
 
 require 'outerwears.schema'

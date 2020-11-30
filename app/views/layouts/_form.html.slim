@@ -10,26 +10,44 @@
           .form_area_content_image_box_btn   
             | 画像をアップロード
             = f.file_field :image, class: "form_area_content_image_box_btn_none"
-        - if model.image.present?
-          .form_area_content_image_box_preview          
-        - else
-          .form_area_content_image_box_camera
-      = f.fields_for :colors do |color_field|
-        = color_field.collection_select :color_ids, ColorData.all, :id, :name, include_hidden: false, multiple: true, prompt: "カラー  ※複数選択可", class: "form_area_content_select"
-        / = color_field.collection_select :color_ids, ColorData.all, :id, :name, { include_hidden: false }, { class: 'form_area_content_select', multiple: true, prompt: "カラー  ※複数選択可" }
-      
-      = f.fields_for :blands do |bland_field|
-        = bland_field.collection_select :brand_ids, PrefectureData.all, :id, :name, prompt: "マイブランド  ※複数選択可", class: "form_area_content_select"
-        = bland_field.text_field :name, class: "form_area_content_text", placeholder: "登録されていないブランド  ※複数入力可", color: "#fff"
+        = image_tag model.image.url class: "form_area_content_image_box_preview", id: :img_prev if model.image.present?
 
-      = f.fields_for :shop do |shop_field|
-        = shop_field.collection_select :shop_id, PrefectureData.all, :id, :name, prompt: "マイショップ", class: "form_area_content_select"
-        = shop_field.text_field :name, class: "form_area_content_text", placeholder: "登録されていないショップ", color: "#fff"
+      .form_area_content_select_multiple
+        .form_area_content_select_multiple_text
+          | カラーを選択
+      .form_area_content_check_box#form_id
+        = f.collection_check_boxes :color_ids, Color.all, :id, :name, multiple: true do |color|
+          = color.label do
+            = color.object.name
+            = color.check_box
 
-      = f.text_field :purchase_date, class: "form_area_content_text", placeholder: "購入日", color: "#fff"
+      .form_area_content_select_multiple
+        .form_area_content_select_multiple_text
+          | マイブランドを選択
+      .form_area_content_check_box#form_id
+        = f.collection_check_boxes :brand_ids, Brand.all, :id, :name, multiple: true do |brand|
+          = brand.label do
+            = brand.object.name
+            = brand.check_box
+
+      / ブランドの複数保存の検証中
+      / - f.fields_for :brands do |brand_field|
+      /   = brand_field.text_field :brand_names, class: "form_area_content_text", placeholder: "登録されていないブランド  ※複数入力可", color: "#fff"
+        / = brand_field.text_field :brand_names, class: "form_area_content_text", placeholder: "登録されていないブランド  ※複数入力可", color: "#fff"
+
+      = f.text_field :brand_name, class: "form_area_content_text", placeholder: "登録されていないブランド  ※複数入力可", color: "#fff"
+        
+      = f.date_field :purchase_date, class: "form_area_content_text", placeholder: "購入日", color: "#fff"
 
       = f.collection_select :prefecture_id, PrefectureData.all, :id, :name, prompt: "購入地域", class: "form_area_content_select", class: "form_area_content_select"
 
       - if controller_name != "accessories"
-        = f.fields_for :seasons do |season_field|
-          = season_field.collection_select :shop_id, PrefectureData.all, :id, :name, prompt: "季節  ※複数選択可", class: "form_area_content_select"
+        .form_area_content_select_multiple
+          .form_area_content_select_multiple_text
+            | 着用季節
+        .form_area_content_check_box#form_id
+          = f.collection_check_boxes :season_ids, Season.all, :id, :name, prompt: "季節  ※複数選択可" do |season|
+            = season.label do
+              = season.object.name
+              = season.check_box
+      = f.submit

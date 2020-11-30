@@ -1,4 +1,4 @@
-class OuterwearSeason < ApplicationRecord
-  belongs_to :outerwear
+class PantSeason < ApplicationRecord
+  belongs_to :pant
   belongs_to :season
 end

@@ -1,0 +1,121 @@
+.form {
+  padding: 15vh 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  &_area {
+    margin: 0 auto;
+    width: 40vw;
+    background-color: rgb(43, 43, 43);
+    // フォームヘッダー
+    &_header {
+      h1{
+        font-size: 2rem;
+      }
+      box-sizing: border-box;
+      padding: 5%;
+      text-align: center;
+      line-height:  3vh;
+      height: 20%;
+      background-image: image-url("closet_new_header.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(0.7px);
+      top: -5px;
+      z-index: -1;
+    }
+    &_content {
+      box-sizing: border-box;
+      padding: 5%;
+      line-height: 10vh;
+    // ファイルアップロード
+      &_image_box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 2px solid rgb(185, 185, 185);
+        &_btn {
+          background-image: image-url("blouse-2597205_1920.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          line-height: 4vh;
+          height: 4vh;
+          width: 120%;
+          text-align: center;
+          &_none {
+            display: none;
+          }
+        }
+        &_btn:hover {
+          cursor: pointer;
+        }
+        &_camera {
+          height: 18vh;
+          width: 10vw;
+          background-image: image-url("camera_icon.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        &_preview {
+          height: 18vh;
+          width: 10vw;
+          // background-repeat: no-repeat;
+          // background-size: cover;
+          // background-position: center;
+        }
+      }
+      &_text {
+        color: rgb(185, 185, 185);
+        height: 4vh;
+        width: 100%;
+        background-color: rgb(43, 43, 43);
+        border-width: 0 0 2px 0;
+        font-size: 100%;
+      }
+      &_text::placeholder {
+        color: rgb(185, 185, 185);
+      }
+      select {
+        color: rgb(185, 185, 185);
+        height: 4vh;
+        width: 100%;
+        background-color: rgb(43, 43, 43);
+        border-width: 0 0 2px 0;
+        font-size: 100%;
+      }
+      &_select_multiple {
+        margin-top: 3vh;
+        line-height: 4vh;
+        width: 100%;
+        height: 4vh;
+        background-color: rgb(43, 43, 43);
+        border-bottom: 2px solid rgb(185, 185, 185);
+        font-size: 100%;
+        &_text {
+          color: rgb(185, 185, 185);
+        }
+      }
+      &_check_box {
+        margin-top: 3vh;
+        width: 100%;
+        line-height: 5vh;
+        label{
+          width: 40%;
+          margin-right: 10%;
+          display: inline-block;
+          text-align: center;
+        }
+        label:hover{
+          cursor: pointer;
+        }
+        input { 
+          display: none;
+        }
+      }
+    }
+  }  
+}

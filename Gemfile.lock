@@ -53,9 +53,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
-    bootstrap_form (4.5.0)
-      actionpack (>= 5.2)
-      activemodel (>= 5.2)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.33.0)
@@ -233,6 +230,7 @@ GEM
       tilt (>= 1.1, < 3)
     sassc (2.4.0)
       ffi (~> 1.9)
+    select2-rails (4.0.13)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -283,7 +281,6 @@ PLATFORMS
 DEPENDENCIES
   active_hash
   bootsnap (>= 1.1.0)
-  bootstrap_form
   byebug
   capybara (>= 2.15)
   carrierwave
@@ -305,6 +302,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sass-rails (~> 5.0)
+  select2-rails
   selenium-webdriver
   slim-rails
   spring

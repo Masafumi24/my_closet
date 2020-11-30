@@ -2,7 +2,6 @@ create_table "outerwears", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHAR
   t.string "image",                                               null: false
   t.datetime "purchase_date",                                     null: false
   t.integer "prefecture_id"
-  t.belongs_to "shop",                                            foreign_key: true
   t.datetime "created_at",                                        null: false
   t.datetime "updated_at",                                        null: false
   t.datetime "deleted_at"

@@ -4,11 +4,11 @@
   .closet-index_graph_box
     h1.closet-index_graph_box_title
       | 色の割合
-    = pie_chart @color_graph_data, colors: @background_colors
+    = pie_chart @color_graph_data, colors: @color_background_colors
   .closet-index_graph_box
     h1.closet-index_graph_box_title
       | 季節ごとのアイテムの割合
-    = pie_chart @color_graph_data
+    = pie_chart @season_graph_data, colors: @season_background_seasons
 .closet-index_new
   .closet-index_new_btn#closet-index_new_btn
     | 収納する
