@@ -117,5 +117,21 @@
         }
       }
     }
+    //ボタン用レイアウト
+    .submit_button {
+      margin: 0 auto;
+      margin-top: 10vh;
+      padding: 0.5vh 5vw;
+      display: block;
+      color: #b1921b;
+      border-right: 4px solid #cea82c;
+      border-bottom: 10px solid #987c1e;
+      border-left: 4px solid #ffed8b;
+      border-radius: 0;
+      background: -webkit-gradient(linear, right top, left top, from(#ffd75b), color-stop(30%, #fff5a0), color-stop(40%, #fffabe), color-stop(50%, #ffffdb), color-stop(70%, #fff5a0), to(#fdd456));
+      background: -webkit-linear-gradient(right, #ffd75b 0%, #fff5a0 30%, #fffabe 40%, #ffffdb 50%, #fff5a0 70%, #fdd456 100%);
+      background: linear-gradient(-90deg, #ffd75b 0%, #fff5a0 30%, #fffabe 40%, #ffffdb 50%, #fff5a0 70%, #fdd456 100%);
+      text-shadow: -1px -1px 1px #ffffd9;
+    }
   }  
 }
