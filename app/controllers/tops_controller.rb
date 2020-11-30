@@ -1,10 +1,15 @@
 class TopsController < ApplicationController
+
+  def class_object
+    Top
+  end
+
   def new
-    @top = FormTopNew.new
+    @top = TopsFormObject.new
   end
 
   def create
-    @top = FormTopNew.new(tops_params)
+    @top = TopsFormObject.new(tops_params)
     @top.save ? (redirect_to root_path) : (render "new")
   end
 
