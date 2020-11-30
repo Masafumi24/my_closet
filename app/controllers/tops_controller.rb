@@ -1,9 +1,5 @@
 class TopsController < ApplicationController
 
-  def class_object
-    Top
-  end
-
   def new
     @top = TopsFormObject.new
   end
