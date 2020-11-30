@@ -1,4 +1,4 @@
-class FormTopNew
+class TopsFormObject
   include ActiveModel::Model
 
   attr_accessor :image, 
