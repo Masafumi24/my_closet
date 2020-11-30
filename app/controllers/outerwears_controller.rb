@@ -19,7 +19,7 @@ class OuterwearsController < ApplicationController
       :brand_name,
       color_ids: [],
       season_ids: [],
-      brand_ids: [],
+      brand_ids: []
     )
   end
 end

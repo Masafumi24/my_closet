@@ -18,7 +18,7 @@ class AccessoriesController < ApplicationController
       :shop_id,
       :brand_name,
       color_ids: [],
-      brand_ids: [],
+      brand_ids: []
     )
   end
 end

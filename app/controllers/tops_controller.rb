@@ -1,5 +1,4 @@
 class TopsController < ApplicationController
-
   def new
     @top = TopsFormObject.new
   end
@@ -20,7 +19,7 @@ class TopsController < ApplicationController
       :brand_name,
       color_ids: [],
       season_ids: [],
-      brand_ids: [],
+      brand_ids: []
     )
   end
 end
