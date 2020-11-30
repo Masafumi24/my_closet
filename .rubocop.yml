@@ -1,0 +1,56 @@
+AllCops:
+  TargetRubyVersion: 2.5.1
+  Exclude:
+    - 'bin/*'
+    - 'db/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'config/**/*'
+    - 'lib/**/*'
+    - 'test/**/*'
+    - 'spec/**/*'
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'node_modules/**/*'
+
+Metrics/LineLength:
+  Max: 200
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 26
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 200
+
+Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Lint/SuppressedException:
+  Enabled: false
+
+ParameterLists:
+  Max: 10
+  CountKeywordArgs: true

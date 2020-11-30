@@ -1,0 +1,34 @@
+require 'users.schema'
+
+require 'brands.schema'
+require 'colors.schema'
+require 'seasons.schema'
+
+require 'outerwears.schema'
+require 'outerwear_brands.schema'
+require 'outerwear_colors.schema'
+require 'outerwear_seasons.schema'
+
+require 'tops.schema'
+require 'top_brands.schema'
+require 'top_colors.schema'
+require 'top_seasons.schema'
+
+require 'pants.schema'
+require 'pant_brands.schema'
+require 'pant_colors.schema'
+require 'pant_seasons.schema'
+
+require 'shoes.schema'
+require 'shoe_brands.schema'
+require 'shoe_colors.schema'
+require 'shoe_seasons.schema'
+
+require 'accessories.schema'
+require 'accessory_brands.schema'
+require 'accessory_colors.schema'
+
+require 'others.schema'
+require 'other_brands.schema'
+require 'other_colors.schema'
+require 'other_seasons.schema'

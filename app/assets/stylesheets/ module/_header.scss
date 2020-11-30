@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  color: white;
+  box-sizing: border-box;
+
+  &_left {
+    height: 100%;
+    width: 20%;
+    line-height: 10vh;
+  }
+
+  &_right {
+    height: 100%;
+    width: 20%;
+    line-height: 10vh;
+  }
+}

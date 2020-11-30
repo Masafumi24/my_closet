@@ -1,0 +1,8 @@
+create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "user情報の管理" do |t|
+  t.string "name",                                                null:false
+  t.string "email",                                               null:false
+  t.string "password_digest",                                     null:false
+  t.string "icon-image"
+  t.datetime "created_at",                                        null: false
+  t.datetime "updated_at",                                        null: false
+end
