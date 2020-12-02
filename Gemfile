@@ -15,6 +15,7 @@ gem 'html2slim'
 gem 'slim-rails'
 gem "chartkick"
 gem 'chartable'
+gem 'select2-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'

@@ -12,30 +12,28 @@
             = f.file_field :image, class: "form_area_content_image_box_btn_none"
         = image_tag model.image.url class: "form_area_content_image_box_preview", id: :img_prev if model.image.present?
 
-      .form_area_content_select
-        .form_area_content_select_multiple
-          .form_area_content_select_multiple_text
-            | カラーを選択
-          .form_area_content_select_multiple_text
-            i.fas.fa-angle-down
-          
-        .form_area_content_check_box#form_id
-          = f.collection_check_boxes :color_ids, Color.all, :id, :name, multiple: true do |color|
-            = color.label do
-              = color.object.name
-              = color.check_box
+      .form_area_content_select_multiple#form_color_field
+        .form_area_content_select_multiple_text
+          | カラーを選択
+        .form_area_content_select_multiple_text
+          i.fas.fa-angle-down
+        
+      .form_area_content_check_box#color_field
+        = f.collection_check_boxes :color_ids, Color.all, :id, :name, multiple: true do |color|
+          = color.label do
+            = color.object.name
+            = color.check_box
 
-      .form_area_content_select
-        .form_area_content_select_multiple
-          .form_area_content_select_multiple_text
-            | マイブランドを選択
-          .form_area_content_select_multiple_text
-            i.fas.fa-angle-down
-        .form_area_content_check_box#form_id
-          = f.collection_check_boxes :brand_ids, Brand.all, :id, :name, multiple: true do |brand|
-            = brand.label do
-              = brand.object.name
-              = brand.check_box
+      .form_area_content_select_multiple#form_my_brand_field
+        .form_area_content_select_multiple_text
+          | マイブランドを選択
+        .form_area_content_select_multiple_text
+          i.fas.fa-angle-down
+      .form_area_content_check_box#my_brand_field
+        = f.collection_check_boxes :brand_ids, Brand.all, :id, :name, multiple: true do |brand|
+          = brand.label do
+            = brand.object.name
+            = brand.check_box
 
       / ブランドの複数保存の検証中
       / - f.fields_for :brands do |brand_field|
@@ -48,16 +46,15 @@
 
       = f.collection_select :prefecture_id, PrefectureData.all, :id, :name, prompt: "購入地域", class: "form_area_content_select", class: "form_area_content_select"
 
-      .form_area_content_select
-        - if controller_name != "accessories"
-          .form_area_content_select_multiple
-            .form_area_content_select_multiple_text
-              | 着用季節
-            .form_area_content_select_multiple_text
-              i.fas.fa-angle-down
-          .form_area_content_check_box#form_id
-            = f.collection_check_boxes :season_ids, Season.all, :id, :name, prompt: "季節  ※複数選択可" do |season|
-              = season.label do
-                = season.object.name
-                = season.check_box
+      - if controller_name != "accessories"
+        .form_area_content_select_multiple#form_season_field
+          .form_area_content_select_multiple_text
+            | 着用季節
+          .form_area_content_select_multiple_text
+            i.fas.fa-angle-down
+        .form_area_content_check_box#season_field
+          = f.collection_check_boxes :season_ids, Season.all, :id, :name, prompt: "季節  ※複数選択可" do |season|
+            = season.label do
+              = season.object.name
+              = season.check_box
       = f.submit class: "submit_button", value: "収納する"
