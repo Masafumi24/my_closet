@@ -9,8 +9,11 @@
         = f.label :image
           .form_area_content_image_box_btn   
             | 画像をアップロード
-            = f.file_field :image, class: "form_area_content_image_box_btn_none"
-        = image_tag model.image.url class: "form_area_content_image_box_preview", id: :img_prev if model.image.present?
+            = f.file_field :image, class: "form_area_content_image_box_btn_none", id: :img_field
+        - if model.image.present?
+          = image_tag model.image.url class: "form_area_content_image_box_preview", id: :img_prev
+        - else
+          = image_tag "form_camera.jpg", class: "form_area_content_image_box_preview", id: :img_prev
 
       .form_area_content_select_multiple#form_color_field
         .form_area_content_select_multiple_text

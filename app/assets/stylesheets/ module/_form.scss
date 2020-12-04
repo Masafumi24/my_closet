@@ -1,7 +1,6 @@
 .form {
   padding: 15vh 0;
   box-sizing: border-box;
-  height: 100vh;
 
   &_area {
     margin: 0 auto;
@@ -52,20 +51,10 @@
         &_btn:hover {
           cursor: pointer;
         }
-        &_camera {
-          height: 18vh;
-          width: 10vw;
-          background-image: image-url("camera_icon.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
         &_preview {
           height: 18vh;
           width: 10vw;
-          // background-repeat: no-repeat;
-          // background-size: cover;
-          // background-position: center;
+          object-fit: contain;
         }
       }
       &_text {
