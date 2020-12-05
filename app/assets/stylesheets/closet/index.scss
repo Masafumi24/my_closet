@@ -27,7 +27,7 @@
   }
 }
 
-.closet-index_new {
+.closet-index_move {
   text-align: center;
   &_btn {
     display: inline-block;
@@ -39,10 +39,10 @@
     background-color: rgb(32, 32, 32);
   }
 
-  #closet-index_new_box {
+  #closet-index_move_box {
     display: none;
 
-    .closet-index_new_box {
+    .closet-index_move_box {
       box-sizing: border-box;
       padding: 20vh 5vh;
       display: flex;

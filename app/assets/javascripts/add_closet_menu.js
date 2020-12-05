@@ -1,5 +1,5 @@
 $(function () {
-  $('#closet-index_new_btn').click(function(){
-    $('#closet-index_new_box').slideToggle();
+  $('#closet-index_move_btn').click(function(){
+    $('#closet-index_move_box').slideToggle();
   });
 });

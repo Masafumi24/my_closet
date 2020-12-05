@@ -9,26 +9,26 @@
     h1.closet-index_graph_box_title
       | 季節ごとのアイテムの割合
     = pie_chart @season_graph_data, colors: @season_background_seasons
-.closet-index_new
-  .closet-index_new_btn#closet-index_new_btn
+.closet-index_move
+  .closet-index_move_btn#closet-index_move_btn
     | 収納する
-  #closet-index_new_box
-    ul.closet-index_new_box
-      li.closet-index_new_box_list
+  #closet-index_move_box
+    ul.closet-index_move_box
+      li.closet-index_move_box_list
         = link_to new_tops_path
           | TOPS
-      li.closet-index_new_box_list
+      li.closet-index_move_box_list
         = link_to new_outerwears_path
           | OUTER WEAR
-      li.closet-index_new_box_list
+      li.closet-index_move_box_list
         = link_to new_pants_path
           | PANTS or SKIRT
-      li.closet-index_new_box_list
+      li.closet-index_move_box_list
         = link_to new_shoes_path
           | SHOES
-      li.closet-index_new_box_list
+      li.closet-index_move_box_list
         = link_to new_accessories_path
           | ACCESSORY
-      li.closet-index_new_box_list
+      li.closet-index_move_box_list
         = link_to new_others_path
           | OTHER
