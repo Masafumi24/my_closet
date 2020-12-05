@@ -1,5 +1,5 @@
 .closet-index_top {
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
@@ -11,9 +11,9 @@
     background-position: bottom;
   }
 }
-
+// グラフを表示するエリア
 .closet-index_graph {
-  margin-bottom: 40vh;
+  margin-bottom: 20vh;
   display: flex;
   color: white;
   box-sizing: border-box;
@@ -27,11 +27,40 @@
   }
 }
 
+// 収納したアイテムへのパスを飛ばすエリア
+.closet-index_item_list {
+  position: relative;
+  margin-bottom: 20vh;
+  display: flex;
+  height: 70vh;
+  &_opacity_plate {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(78, 78, 78);
+    opacity: 0.5;
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    z-index: 99;
+  }
+
+  &_all {
+    width: 50%;
+    height: 100%;
+    
+  }
+  &_genres {
+    width: 50%;
+  }
+}
+
+
+// 収納画面に移行するためのボタン
 .closet-index_move {
   text-align: center;
   &_btn {
     display: inline-block;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
     border: 1px solid white;
     padding: 1.0rem 4.0rem;
   }
@@ -40,6 +69,7 @@
   }
 
   #closet-index_move_box {
+    margin-bottom: 3vh;
     display: none;
 
     .closet-index_move_box {
